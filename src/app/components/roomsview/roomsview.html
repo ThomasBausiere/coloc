@@ -1,0 +1,20 @@
+<section class="roomsviewSection" aria-label="Présentation de l'appartement">
+  <header class="roomsviewSection__header">
+    <h2 class="roomsviewSection__title title">{{ title }}</h2>
+    <p class="roomsviewSection__text texts">{{ description }}</p>
+  </header>
+
+  <div class="roomsview">
+    @for (item of items; track item.key) {
+      <figure class="tile tile--{{ item.key }}">
+        <img
+          class="tile__img"
+          [src]="item.src"
+          [alt]="item.alt"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    }
+  </div>
+</section>

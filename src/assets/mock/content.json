@@ -1,0 +1,33 @@
+{
+  "common": {
+    "titles": {
+      "contactForm": "Toujours intéressé ? Contactez Nous"
+    },
+    "descriptions": {
+      "footerCta": "Trouvez votre future chambre dans une colocation conviviale et bien située. Nous sommes à votre disposition pour vous accompagner et organiser une visite."
+    },
+    "images": {
+      "logo": "/assets/media/common/logo.svg"
+    }
+  },
+  "room1": {
+    "titles": ["Titre room1"],
+    "descriptions": ["Description room1"],
+    "images": ["/assets/media/rooms/room1/hero.jpg"]
+  },
+  "room2": {
+    "titles": ["Titre room2"],
+    "descriptions": ["Description room2"],
+    "images": ["/assets/media/rooms/room2/hero.jpg"]
+  },
+  "room3": {
+    "titles": ["Titre room3"],
+    "descriptions": ["Description room3"],
+    "images": ["/assets/media/rooms/room3/hero.jpg"]
+  },
+  "room4": {
+    "titles": ["Titre room4"],
+    "descriptions": ["Description room4"],
+    "images": ["/assets/media/rooms/room4/hero.jpg"]
+  }
+}

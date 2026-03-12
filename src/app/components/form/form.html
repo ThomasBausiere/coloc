@@ -1,0 +1,68 @@
+<section class="contactForm" aria-label="Formulaire de contact">
+  <h2 class="contactForm__title title">Toujours intéressé? Contactez-nous!</h2>
+
+  <div class="contactForm__card">
+    <form class="contactForm__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <div class="contactForm__row contactForm__row--two">
+        <div class="field">
+          <label class="field__label texts" for="fullname">Nom / Prenom :</label>
+          <input
+            id="fullname"
+            class="field__control"
+            type="text"
+            formControlName="fullname"
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="field">
+          <label class="field__label texts" for="email">E-mail :</label>
+          <input
+            id="email"
+            class="field__control"
+            type="email"
+            formControlName="email"
+            autocomplete="email"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label texts" for="subject">Objet :</label>
+        <input id="subject" class="field__control" type="text" formControlName="subject" />
+      </div>
+
+      <div class="field">
+        <label class="field__label texts" for="message">Message :</label>
+        <textarea
+          id="message"
+          class="field__control field__control--textarea"
+          formControlName="message"
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label class="field__label texts" for="documents">Documents :</label>
+
+        <div class="file">
+                <input
+                id="documents"
+                class="file__input"
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
+                (change)="onFilesSelected($event)"
+                multiple
+                />
+          <span class="file__fake" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="contactForm__actions">
+        <button class="btn btn--primary contactForm__submit" type="submit">
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

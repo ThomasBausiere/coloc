@@ -1,0 +1,69 @@
+<section class="roomsthumbsSection">
+  <header class="roomsthumbsSection__header">
+    <h2 class="roomsthumbsSection__title title">{{ title }}</h2>
+    <p class="roomsthumbsSection__text texts">{{ description }}</p>
+  </header>
+
+  <div class="roomsthumbs" [class.roomsthumbs--others]="isOthersMode">
+    @for (room of displayedRooms; track room.id) {
+      <article class="card">
+        <div
+          class="card__badge"
+          [class.card__badge--off]="!room.available"
+        >
+          @if (room.available) {
+            Disponible
+          } @else {
+            Non disponible
+          }
+        </div>
+
+        <div class="card__media">
+          <div class="card__image">
+            <img
+              [src]="room.image"
+              [alt]="room.title"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="card__content">
+          <h3 class="card__title subtitle">{{ room.title }}</h3>
+
+          <div class="card__meta subtxt">
+            <span class="hor">
+                        <img
+              class="meta__icon"
+              src="assets/icons/place.svg"
+              alt=""
+              aria-hidden="true"
+            /> Valencienne
+            </span>
+ <span class="hor subtitle">
+                        <img
+              class="meta__icon"
+              src="assets/icons/house.svg"
+              alt=""
+              aria-hidden="true"
+            /> 15m²
+ </span>
+
+          </div>
+
+          <div class="card__bottom ">
+            <span class="card__price subtxt">Prix : 500€/Personne</span>
+
+            <button
+              class="btn btn--primary subtn"
+              type="button"
+              (click)="openRoom(room.id)"
+            >
+              Voir plus
+            </button>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>

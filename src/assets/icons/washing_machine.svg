@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #1b263b;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #1b263b;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 30px;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-3" x="229.8" y="375.66" width="473.8" height="449.44"/>
+    <path class="cls-3" d="M271.27,252.91h390.87c22.89,0,41.47,18.58,41.47,41.47v81.27H229.8v-81.27c0-22.89,18.58-41.47,41.47-41.47Z"/>
+    <circle class="cls-4" cx="359.47" cy="501.07" r="14.25"/>
+    <g>
+      <circle class="cls-1" cx="291.67" cy="314.29" r="14.25"/>
+      <circle class="cls-1" cx="366.81" cy="314.29" r="14.25"/>
+      <circle class="cls-1" cx="441.94" cy="314.29" r="14.25"/>
+      <circle class="cls-1" cx="517.08" cy="314.29" r="14.25"/>
+      <rect class="cls-1" x="581.24" y="306.33" width="76.74" height="15.79" rx="7.89" ry="7.89"/>
+    </g>
+    <circle class="cls-3" cx="468.62" cy="608.32" r="100.39"/>
+    <path class="cls-3" d="M325.49,564.96c-6.31,19.7-8.78,40.5-6.59,61.07,7.6,71.39,66.1,131.08,142.5,133.7,1.76.06,3.52.09,5.29.09,83.98,0,152.13-68.09,152.2-152.07.07-84.11-68.1-152.32-152.19-152.32,0,0-32.69-1.95-62.84,21.85"/>
+    <path class="cls-3" d="M369.01,595.73s58.59-29.94,110.76,19.22,89.24-6.63,89.24-6.63"/>
+  </g>
+  <polygon class="cls-2" points="540 572.47 584.17 824.33 806.39 824.33 854.13 572.47 540 572.47"/>
+  <path class="cls-2" d="M540,572.47h213.72s-93.27-121.81-213.72,0Z"/>
+  <path class="cls-2" d="M854.13,572.47s-74.08-116.87-190.88-53.21c0,0,50.96,2.18,90.47,53.21h100.41Z"/>
+</svg>

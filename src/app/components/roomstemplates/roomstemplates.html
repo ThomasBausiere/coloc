@@ -1,0 +1,104 @@
+<section class="roomTpl" aria-label="Détail chambre">
+
+  <h1 class="roomTpl__title title">{{ room.title }}</h1>
+
+  <div class="roomTpl__mosaic">
+    <figure class="tile tile--main">
+      <img
+        class="tile__img"
+        [src]="images.main"
+        [alt]="room.title"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+
+    <figure class="tile tile--a">
+      <img
+        class="tile__img"
+        [src]="images.a"
+        [alt]="room.title"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+
+    <figure class="tile tile--b">
+      <img
+        class="tile__img"
+        [src]="images.b"
+        [alt]="room.title"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="roomTpl__desc">
+    <div class="roomTpl__descHeader">
+      <h2 class="roomTpl__descTitle title">Description</h2>
+      <div class="roomTpl__rule" aria-hidden="true"></div>
+    </div>
+
+    <div class="roomTpl__descBody">
+      <div class="roomTpl__descLeft">
+        <div class="roomTpl__meta texts">
+          <span class="pill " [class.pill--off]="!room.available">
+            @if (room.available) {
+              Disponible
+            } @else {
+              Non disponible
+            }
+          </span>
+
+          <span class="meta texts">
+            <img
+              class="meta__icon"
+              src="assets/icons/place.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>{{ room.city }}</span>
+          </span>
+
+          <span class="meta">
+            <img
+              class="meta__icon"
+              src="assets/icons/house.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="">{{ room.sizeM2 }}m2</span>
+          </span>
+        </div>
+
+        <p class="roomTpl__text texts">
+          {{ room.description }}
+        </p>
+      </div>
+
+      <div class="roomTpl__descRight" aria-hidden="true">
+        <figure class="sidePic">
+          <img
+            class="sidePic__img"
+            [src]="sideImage1"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <figure class="sidePic">
+          <img
+            class="sidePic__img"
+            [src]="sideImage2"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+
+</section>

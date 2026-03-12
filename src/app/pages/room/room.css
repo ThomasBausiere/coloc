@@ -1,0 +1,29 @@
+.roomPage__others{
+  display: grid;
+  gap: var(--space-6);
+  text-align: left;
+}
+
+.roomPage__othersTitle{
+  font-size: var(--title-size-mobile);
+  color: var(--text);
+}
+
+.roomPage__othersText{
+  font-size: var(--body-size-mobile);
+  color: var(--text);
+  opacity: .85;
+  line-height: var(--line-height-normal);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px){
+  .roomPage__othersTitle{
+    font-size: var(--title-size);
+  }
+
+  .roomPage__othersText{
+    font-size: var(--body-size);
+  }
+}

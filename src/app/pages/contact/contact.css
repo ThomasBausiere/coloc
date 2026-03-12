@@ -1,0 +1,14 @@
+.contactPage__header{
+  text-align: center;
+}
+
+.contactPage__title{
+  font-size: var(--title-size-mobile);
+  color: var(--text);
+}
+
+@media (min-width: 1024px){
+  .contactPage__title{
+    font-size: var(--title-size);
+  }
+}

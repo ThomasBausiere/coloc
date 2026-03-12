@@ -1,0 +1,139 @@
+.contactForm{
+
+  display: grid;
+  gap: var(--space-5);
+}
+
+.contactForm__title{
+  margin: 0;
+  text-align: center;
+
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.contactForm__card{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-5);
+}
+
+.contactForm__form{
+  display: grid;
+  gap: var(--space-4);
+}
+
+.contactForm__row{
+  display: grid;
+  gap: var(--space-4);
+}
+
+.field{
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field__label{
+  opacity: .9;
+}
+
+.field__control{
+  width: 100%;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(15, 23, 42, 0.03);
+  padding: 0 12px;
+  outline: none;
+}
+
+.field__control:focus{
+  border-color: rgba(243, 196, 0, 0.8);
+  box-shadow: 0 0 0 3px rgba(243, 196, 0, 0.22);
+}
+
+.field__control--textarea{
+  height: 210px;
+  padding: 12px;
+  resize: none;
+}
+
+.file{
+  position: relative;
+}
+
+.file__input{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file__fake{
+  display: block;
+  width: 100%;
+  height: 66px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.contactForm__actions{
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-2);
+}
+
+.contactForm__submit{
+  min-width: 120px;
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+  .contactForm{
+    gap: var(--space-6);
+      margin-right: 2%;
+  margin-left: 2%;
+  }
+
+  .contactForm__title{
+    
+  }
+
+  .contactForm__card{
+    padding: var(--space-6);
+  }
+
+  .contactForm__form{
+    gap: var(--space-5);
+  }
+
+  .contactForm__row--two{
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .field__label{
+    
+  }
+
+  .field__control{
+    height: 44px;
+  }
+
+  .field__control--textarea{
+    height: 250px;
+  }
+
+  .file__fake{
+    height: 74px;
+  }
+
+  .contactForm__submit{
+    min-width: 140px;
+  }
+}

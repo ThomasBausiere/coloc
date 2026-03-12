@@ -1,0 +1,45 @@
+<footer class="footer" aria-label="Pied de page">
+  <div class="footer__inner">
+    <section class="footer__cta" aria-label="Appel à l'action">
+      <h2 class="footer__title footers-title">
+        Envie de rejoindre la colocation?<br />
+        Écrivez-nous !
+      </h2>
+
+      <p class="footer__text texts">
+        Trouvez votre future chambre dans une colocation conviviale et bien située.
+        Nous sommes à votre disposition pour vous accompagner et organiser une visite.
+      </p>
+
+      <app-btn-contact-us></app-btn-contact-us>
+    </section>
+
+    <div class="footer__divider" aria-hidden="true"></div>
+
+    <nav class="footer__nav" aria-label="Pages">
+      <h3 class="footer__subtitle footers-title">Page</h3>
+
+      @for (l of links; track l.to) {
+        <a
+          class="footer__link texts"
+          [routerLink]="l.to"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: l.to === '/' }"
+        >
+          {{ l.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="footer__divider footer__divider--mobile" aria-hidden="true"></div>
+    <div class="footer__divider footer__divider--desktop" aria-hidden="true"></div>
+
+    <section class="footer__legal" aria-label="Informations légales">
+      <h3 class="footer__subtitle footers-title">Informations légales</h3>
+
+      <p class="footer__info texts">©2026 Dominique Bausière - Tous droits réservés</p>
+      <p class="footer__info texts">Mentions légales</p>
+      <p class="footer__info texts">Politique de confidentialité</p>
+    </section>
+  </div>
+</footer>

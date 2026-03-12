@@ -1,0 +1,62 @@
+<input
+  class="menu__toggle"
+  type="checkbox"
+  id="menuToggle"
+  [checked]="isOpen()"
+  (change)="isOpen.set(($any($event.target).checked))"
+/>
+
+<label class="menu__burger" for="menuToggle" aria-label="Ouvrir le menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+<div class="menu__overlay" [class.is-open]="isOpen()" (click)="close()" aria-hidden="true"></div>
+
+<aside class="menu__drawer" [class.is-open]="isOpen()" aria-label="Menu mobile">
+  <div class="menu__drawerHeader">
+    <a class="menu__logo" routerLink="/" (click)="close()">BOZ</a>
+
+    <button class="menu__drawerClose" type="button" (click)="close()" aria-label="Fermer">
+      ✕
+    </button>
+  </div>
+
+  <nav class="menu__drawerNav" aria-label="Navigation">
+    @for (l of links; track l.to) {
+      <a
+        class="menu__drawerLink title"
+        [routerLink]="l.to"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: l.to === '/' }"
+        (click)="close()"
+      >
+        {{ l.label }}
+      </a>
+    }
+
+  <app-btn-contact-us></app-btn-contact-us>
+  </nav>
+</aside>
+
+<header class="menu__desktop" aria-label="Navigation principale">
+  <div class="menu__bar">
+    <a class="menu__logo" routerLink="/">BOZ</a>
+
+    <nav class="menu__links txtbtn" aria-label="Navigation">
+      @for (l of links; track l.to) {
+        <a
+          class="menu__link"
+          [routerLink]="l.to"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: l.to === '/' }"
+        >
+          {{ l.label }}
+        </a>
+      }
+    </nav>
+
+      <app-btn-contact-us></app-btn-contact-us>
+  </div>
+</header>

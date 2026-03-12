@@ -1,0 +1,106 @@
+.roomsviewSection{
+  display: grid;
+  gap: var(--space-6);
+}
+
+.roomsviewSection__header{
+  display: grid;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.roomsviewSection__title{
+  color: var(--text);
+}
+
+.roomsviewSection__text{
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* MOSAIQUE */
+.roomsview{
+  width: 100%;
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "a a"
+    "b d"
+    "c c"
+    "e f";
+}
+
+.tile{
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: #000;
+}
+
+.tile__img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.tile--a{ 
+  grid-area: a;
+  min-height: 220px;
+}
+
+.tile--b{ 
+  grid-area: b;
+  min-height: 140px;
+}
+
+.tile--c{ 
+  grid-area: c;
+  min-height: 220px;
+}
+
+.tile--d{ 
+  grid-area: d;
+  min-height: 140px;
+}
+
+.tile--e{ 
+  grid-area: e;
+  min-height: 140px;
+}
+
+.tile--f{ 
+  grid-area: f;
+  min-height: 140px;
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+  .roomsviewSection{
+    gap: var(--space-8);
+  }
+
+
+
+
+
+  .roomsview{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a d c c"
+      "b d e f";
+    grid-template-rows: 340px 340px;
+    gap: var(--space-6);
+  }
+
+  .tile--a,
+  .tile--b,
+  .tile--c,
+  .tile--d,
+  .tile--e,
+  .tile--f{
+    min-height: auto;
+  }
+}
