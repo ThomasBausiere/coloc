@@ -1,7 +1,17 @@
 <section class="roomsthumbsSection">
   <header class="roomsthumbsSection__header">
     <h2 class="roomsthumbsSection__title title">{{ title }}</h2>
-    <p class="roomsthumbsSection__text texts">{{ description }}</p>
+    <h3 class="roomsthumbsSection__subtitle subtitle">Un confort individuel au service de la vie partagée</h3><br>
+    <p class="roomsthumbsSection__text texts">      
+      Un confort individuel au service de la vie partagée
+Parce que la réussite d'une colocation repose sur le bien-être de chacun, nous avons conçu nos espaces privés comme de véritables bulles de sérénité. Plus qu'une simple chambre, chaque espace a été pensé pour répondre aux besoins des étudiants d'aujourd'hui : allier <strong >repos, rangement et productivité.</strong> <br/><br>
+Nos 4 chambres, bien que possédant chacune leur propre identité décorative, partagent un standard de confort exigeant : <br/>
+</p>
+<ul class="texts list">
+  <li><strong>Un sommeil de qualité</strong> : Chaque pièce est équipée d'un lit double (140 cm) avec une literie soigneusement sélectionnée pour vous garantir des nuits vraiment réparatrices.</li>
+  <li><strong>Un espace de travail optimisé</strong> : Parce que vos projets n'attendent pas, vous disposez d'un bureau et d'une connexion <strong>Wi-Fi très haut débit</strong> pour télétravailler ou étudier en toute fluidité.</li>
+  <li><strong>De l'espace pour vos effets personnels</strong> : Finies les valises qui traînent. Chaque chambre intègre des solutions de rangement intelligentes (penderies ou placards) pour un intérieur toujours ordonné.</li>
+</ul>
   </header>
 
   <div class="roomsthumbs" [class.roomsthumbs--others]="isOthersMode">
@@ -46,13 +56,13 @@
               src="assets/icons/house.svg"
               alt=""
               aria-hidden="true"
-            /> 15m²
+            /> {{ room.surface }} m²
  </span>
 
           </div>
 
           <div class="card__bottom ">
-            <span class="card__price subtxt">Prix : 500€/Personne</span>
+            <span class="card__price subtxt">{{ room.loyer}}€ ( {{ room.loyerCalculated }} )</span>
 
             <button
               class="btn btn--primary subtn"

@@ -141,6 +141,12 @@ html, body {
   
 }
 
+.list{
+  list-style: disc;
+  text-align: left;
+  padding-left: 3.5rem;
+  margin-top: 0;
+}
 
   .subtitle{
      font-size: var(--subtitle-size);
@@ -153,6 +159,9 @@ html, body {
      font-size: var(--subtnb-size);
 
   }
+strong{
+  font-weight: 900;
+}
 
   .texts{
     font-size: var(--body-size-mobile);

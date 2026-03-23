@@ -14,7 +14,7 @@
 }
 
 .roomsthumbsSection__text{
-  max-width: 780px;
+
   margin: 0 auto;
   line-height: var(--line-height-normal);
   color: var(--text);
@@ -125,6 +125,7 @@
   }
 
   .roomsthumbsSection__text{
+    text-align: left;
   }
 
   .roomsthumbs{
@@ -149,6 +150,7 @@
   }
 
   .roomsthumbsSection__text{
+
   }
 
   .roomsthumbs{
@@ -169,6 +171,8 @@
   .card__bottom .btn{
     min-width: 122px;
   }
+
+
 }
 
 .meta__icon{
@@ -181,4 +185,10 @@
 .hor{
   display: flex;
   align-items: center;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
 }

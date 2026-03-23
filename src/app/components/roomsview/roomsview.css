@@ -6,17 +6,9 @@
 .roomsviewSection__header{
   display: grid;
   gap: var(--space-3);
-  text-align: center;
+  text-align: left;
 }
 
-.roomsviewSection__title{
-  color: var(--text);
-}
-
-.roomsviewSection__text{
-  max-width: 780px;
-  margin: 0 auto;
-}
 
 /* MOSAIQUE */
 .roomsview{
@@ -82,7 +74,9 @@
     gap: var(--space-8);
   }
 
-
+/* .roomsviewSection__text {
+    text-align: left;
+  } */
 
 
 
@@ -103,4 +97,13 @@
   .tile--f{
     min-height: auto;
   }
+  .title{
+  text-align: center;
+
+  }
+  .subtitle{
+    text-align: center;
+  margin-bottom: 10px;
+    
+}
 }
