@@ -1,36 +1,18 @@
 <section class="roomTpl" aria-label="Détail chambre">
-
+  @if (room) {
   <h1 class="roomTpl__title title">{{ room.title }}</h1>
 
   <div class="roomTpl__mosaic">
     <figure class="tile tile--main">
-      <img
-        class="tile__img"
-        [src]="images.main"
-        [alt]="room.title"
-        loading="lazy"
-        decoding="async"
-      />
+      <img class="tile__img" [src]="images.main" [alt]="room.title" loading="lazy" decoding="async" />
     </figure>
 
     <figure class="tile tile--a">
-      <img
-        class="tile__img"
-        [src]="images.a"
-        [alt]="room.title"
-        loading="lazy"
-        decoding="async"
-      />
+      <img class="tile__img" [src]="images.a" [alt]="room.title" loading="lazy" decoding="async" />
     </figure>
 
     <figure class="tile tile--b">
-      <img
-        class="tile__img"
-        [src]="images.b"
-        [alt]="room.title"
-        loading="lazy"
-        decoding="async"
-      />
+      <img class="tile__img" [src]="images.b" [alt]="room.title" loading="lazy" decoding="async" />
     </figure>
   </div>
 
@@ -43,62 +25,52 @@
     <div class="roomTpl__descBody">
       <div class="roomTpl__descLeft">
         <div class="roomTpl__meta texts">
-          <span class="pill " [class.pill--off]="!room.available">
+          <span class="pill" [class.pill--off]="!room.available">
             @if (room.available) {
-              Disponible
+            Disponible
             } @else {
-              Non disponible
+            Non disponible
             }
           </span>
 
           <span class="meta texts">
-            <img
-              class="meta__icon"
-              src="assets/icons/place.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <span>{{ room.city }}</span>
+            <img class="meta__icon" src="assets/icons/place.svg" alt="" aria-hidden="true" />
+            <span>Valenciennes</span>
           </span>
 
           <span class="meta">
-            <img
-              class="meta__icon"
-              src="assets/icons/house.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <span class="">{{ room.sizeM2 }}m2</span>
+            <img class="meta__icon" src="assets/icons/house.svg" alt="" aria-hidden="true" />
+            <span>{{ room.surface }}m²</span>
           </span>
         </div>
 
         <p class="roomTpl__text texts">
-          {{ room.description }}
+          Les loyers sont fonction des chambres, Pas de frais d’état des lieux.
         </p>
+        <p class="roomTpl__text texts">
+          Garants demandés (selon conditions), Caution Visale acceptée.
+          Le contrat de location est signé SANS clause de solidarité.
+        </p>
+        <p class="roomTpl__text texts">
+          Chaque colocataire est indépendant pour le règlement de son loyer et de ses charges.
+          Dépôt de Garantie : 700€ (encaissé et restitué dès l’état des lieux de sortie)
+        </p>
+        <p class="roomTpl__text texts">
+          Dossier complet exigé lors des visites.
+        </p>
+        <p class="roomTpl__text texts">
+
+          Profite du site du gouvernement: <a href="https://www.dossierfacile.logement.gouv.fr/" target="_blank" rel="noopener noreferrer">dossierfacile.logement.gouv.fr</a>
+        </p>
+          <div class="roomTpl__rf">
+    <img src="assets/images/rf.png" alt="Référence dossier facile" />
+  </div>
       </div>
 
-      <div class="roomTpl__descRight" aria-hidden="true">
-        <figure class="sidePic">
-          <img
-            class="sidePic__img"
-            [src]="sideImage1"
-            alt=""
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
 
-        <figure class="sidePic">
-          <img
-            class="sidePic__img"
-            [src]="sideImage2"
-            alt=""
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      </div>
     </div>
   </div>
-
+  } @else {
+  <p class="texts">Chargement de la chambre…</p>
+  }
 </section>

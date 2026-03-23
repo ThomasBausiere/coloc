@@ -5,6 +5,7 @@ import { Contact } from './pages/contact/contact';
 import { Home } from './pages/home/home';
 import { Room } from './pages/room/room';
 import { Confidential } from './pages/confidential/confidential';
+import { Legal } from './pages/legal/legal';
 
 export const routes: Routes = [
 
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path:'contact', component:Contact},
     {path:'room', component:Room},
     {path:'confidential', component:Confidential},
+    {path:'legal',component:Legal},
     { path: '**', redirectTo: '' },    
 ];

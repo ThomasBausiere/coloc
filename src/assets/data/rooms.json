@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Chambre 1",
+    "image": "assets/images/room1_01.jpg",
+    "available": false,
+    "surface": "13",
+    "bedSize": "140x200",
+    "loyer": 400,
+    "loyerCalculated": "400€ + 80€ charges"
+  },
+  {
+    "id": 2,
+    "title": "Chambre 2",
+    "image": "assets/images/room2_01.jpg",
+    "available": false,
+    "surface": "11",
+    "bedSize": "140x190",
+    "loyer": 400,
+    "loyerCalculated": "400€ + 80€ charges"
+  },
+  {
+    "id": 3,
+    "title": "Chambre 3",
+    "image": "assets/images/room3_01.jpg",
+    "available": false,
+    "surface": "14",
+    "bedSize": "140x200",
+    "loyer": 400,
+    "loyerCalculated": "400€ + 80€ charges"
+  },
+  {
+    "id": 4,
+    "title": "Chambre 4",
+    "image": "assets/images/room4_01.jpg",
+    "available": false,
+    "surface": "14",
+    "bedSize": "140x200",
+    "loyer": 420,
+    "loyerCalculated": "420€ + 80€ charges"
+  }
+]

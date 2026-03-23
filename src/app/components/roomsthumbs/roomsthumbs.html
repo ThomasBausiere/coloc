@@ -1,79 +1,113 @@
 <section class="roomsthumbsSection">
   <header class="roomsthumbsSection__header">
     <h2 class="roomsthumbsSection__title title">{{ title }}</h2>
-    <h3 class="roomsthumbsSection__subtitle subtitle">Un confort individuel au service de la vie partagée</h3><br>
-    <p class="roomsthumbsSection__text texts">      
+
+    <h3 class="roomsthumbsSection__subtitle subtitle">
       Un confort individuel au service de la vie partagée
-Parce que la réussite d'une colocation repose sur le bien-être de chacun, nous avons conçu nos espaces privés comme de véritables bulles de sérénité. Plus qu'une simple chambre, chaque espace a été pensé pour répondre aux besoins des étudiants d'aujourd'hui : allier <strong >repos, rangement et productivité.</strong> <br/><br>
-Nos 4 chambres, bien que possédant chacune leur propre identité décorative, partagent un standard de confort exigeant : <br/>
-</p>
-<ul class="texts list">
-  <li><strong>Un sommeil de qualité</strong> : Chaque pièce est équipée d'un lit double (140 cm) avec une literie soigneusement sélectionnée pour vous garantir des nuits vraiment réparatrices.</li>
-  <li><strong>Un espace de travail optimisé</strong> : Parce que vos projets n'attendent pas, vous disposez d'un bureau et d'une connexion <strong>Wi-Fi très haut débit</strong> pour télétravailler ou étudier en toute fluidité.</li>
-  <li><strong>De l'espace pour vos effets personnels</strong> : Finies les valises qui traînent. Chaque chambre intègre des solutions de rangement intelligentes (penderies ou placards) pour un intérieur toujours ordonné.</li>
-</ul>
+    </h3>
+
+    <p class="roomsthumbsSection__text texts">
+      Parce que la réussite d'une colocation repose sur le bien-être de chacun,
+      nous avons conçu nos espaces privés comme de véritables bulles de sérénité.
+      Plus qu'une simple chambre, chaque espace a été pensé pour répondre aux besoins
+      des étudiants d'aujourd'hui : allier
+      <strong>repos, rangement et productivité</strong>.
+    </p>
+
+    <p class="roomsthumbsSection__text texts">
+      Nos 4 chambres, bien que possédant chacune leur propre identité décorative,
+      partagent un standard de confort exigeant :
+    </p>
+
+    <ul class="texts list">
+      <li>
+        <strong>Un sommeil de qualité</strong> : Chaque pièce est équipée d'un lit double
+        (140 cm) avec une literie soigneusement sélectionnée pour vous garantir des nuits
+        vraiment réparatrices.
+      </li>
+
+      <li>
+        <strong>Un espace de travail optimisé</strong> : Parce que vos projets n'attendent pas,
+        vous disposez d'un bureau et d'une connexion <strong>Wi-Fi très haut débit</strong>
+        pour télétravailler ou étudier en toute fluidité.
+      </li>
+
+      <li>
+        <strong>De l'espace pour vos effets personnels</strong> : Finies les valises qui traînent.
+        Chaque chambre intègre des solutions de rangement intelligentes
+        (penderies ou placards) pour un intérieur toujours ordonné.
+      </li>
+    </ul>
   </header>
 
-  <div class="roomsthumbs" [class.roomsthumbs--others]="isOthersMode">
-    @for (room of displayedRooms; track room.id) {
-      <article class="card">
-        <div
-          class="card__badge"
-          [class.card__badge--off]="!room.available"
-        >
-          @if (room.available) {
-            Disponible
-          } @else {
-            Non disponible
-          }
-        </div>
-
-        <div class="card__media">
-          <div class="card__image">
-            <img
-              [src]="room.image"
-              [alt]="room.title"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        <div class="card__content">
-          <h3 class="card__title subtitle">{{ room.title }}</h3>
-
-          <div class="card__meta subtxt">
-            <span class="hor">
-                        <img
-              class="meta__icon"
-              src="assets/icons/place.svg"
-              alt=""
-              aria-hidden="true"
-            /> Valencienne
-            </span>
- <span class="hor subtitle">
-                        <img
-              class="meta__icon"
-              src="assets/icons/house.svg"
-              alt=""
-              aria-hidden="true"
-            /> {{ room.surface }} m²
- </span>
-
+  @if (displayedRooms.length > 0) {
+    <div class="roomsthumbs" [class.roomsthumbs--others]="isOthersMode">
+      @for (room of displayedRooms; track room.id) {
+        <article class="card">
+          <div
+            class="card__badge"
+            [class.card__badge--off]="!room.available"
+          >
+            @if (room.available) {
+              Disponible
+            } @else {
+              Non disponible
+            }
           </div>
 
-          <div class="card__bottom ">
-            <span class="card__price subtxt">{{ room.loyer}}€ ( {{ room.loyerCalculated }} )</span>
-
-            <button
-              class="btn btn--primary subtn"
-              type="button"
-              (click)="openRoom(room.id)"
-            >
-              Voir plus
-            </button>
+          <div class="card__media">
+            <div class="card__image">
+              <img
+                [src]="room.image"
+                [alt]="room.title"
+                loading="lazy"
+              />
+            </div>
           </div>
-        </div>
-      </article>
-    }
-  </div>
+
+          <div class="card__content">
+            <h3 class="card__title subtitle">{{ room.title }}</h3>
+
+            <div class="card__meta subtxt">
+              <span class="hor">
+                <img
+                  class="meta__icon"
+                  src="assets/icons/place.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                Valenciennes
+              </span>
+
+              <span class="hor">
+                <img
+                  class="meta__icon"
+                  src="assets/icons/house.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                {{ room.surface }} m²
+              </span>
+            </div>
+
+            <div class="card__bottom">
+              <span class="card__price subtxt">
+                {{ room.loyer }}€ ({{ room.loyerCalculated }})
+              </span>
+
+              <button
+                class="btn btn--primary subtn"
+                type="button"
+                (click)="openRoom(room.id)"
+              >
+                Voir plus
+              </button>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  } @else {
+    <p class="texts">Chargement des chambres…</p>
+  }
 </section>

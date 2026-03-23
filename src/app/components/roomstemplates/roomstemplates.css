@@ -239,3 +239,15 @@
     object-fit: cover;
   }
 }
+
+.roomTpl__rf {
+  margin-top: var(--space-4);
+}
+
+.roomTpl__rf img {
+  max-width: 320px; /* ajuste selon ton rendu */
+  width: 100%;
+  height: auto;
+  display: block;
+  border: var(--text) 1px solid;
+}
